@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EventActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/eventTitleMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/purple_200"
+                android:ems="10"
+                android:hint="@string/title"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/eventDescMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Описание"
+                android:inputType="textMultiLine"
+                android:minHeight="48dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/eventTimeStMain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:hint="Время начала"
+                    android:inputType="time"
+                    android:minHeight="48dp" />
+
+                <EditText
+                    android:id="@+id/eventTimeFiMain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:hint="Время окончания"
+                    android:inputType="time"
+                    android:minHeight="48dp" />
+            </LinearLayout>
+
+            <CalendarView
+                android:id="@+id/eventDateMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/eventPlaceMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Место"
+                android:inputType="textPostalAddress"
+                android:minHeight="48dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fadeScrollbars="false"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/buttonAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Добавить" />
+
+                <Button
+                    android:id="@+id/buttonEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Изменить" />
+
+                <Button
+                    android:id="@+id/buttonDelete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Удалить" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
